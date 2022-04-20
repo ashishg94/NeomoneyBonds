@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="data"
+            type="com.neomoneybonds.app.model.BasketBond" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="1dp"
+        app:cardCornerRadius="@dimen/_20dp"
+        android:drawable="@drawable/item_border"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bond_price_detail"
+            android:background="@color/neu_smoke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/image_view">
+
+
+            <TextView
+                android:id="@+id/tv_maturity_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_21dp"
+                android:layout_marginTop="@dimen/_14dp"
+                android:textColor="@color/_neutral_snow"
+                android:textSize="@dimen/_12sp"
+                android:text="Maturity Date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Maturity Date" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_21dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:textColor="@color/_neutral_snow"
+                android:textSize="@dimen/_14sp"
+                android:text="@{data.getBondQuantity()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_maturity_date"
+                tools:text="11/08/25" />
+
+            <TextView
+                android:id="@+id/tv_returns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="136dp"
+                android:textColor="@color/_neutral_snow"
+                android:textSize="@dimen/_12sp"
+                android:text="Returns"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Returns" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14dp"
+                android:layout_marginEnd="136dp"
+                android:textColor="@color/_neutral_snow"
+                android:textSize="@dimen/_14sp"
+                android:text="@{data.rateOfInterest}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_returns"
+                tools:text="7.08%" />
+
+            <TextView
+                android:id="@+id/tv_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:layout_marginStart="219dp"
+                android:textColor="@color/_neutral_snow"
+                android:textSize="@dimen/_12sp"
+                android:text="Min. Investment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Min. Investment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:textColor="@color/_neutral_snow"
+                android:textSize="@dimen/_14sp"
+                android:text="@{data.rateOfInterest}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_min"
+                tools:text="7.08%" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
