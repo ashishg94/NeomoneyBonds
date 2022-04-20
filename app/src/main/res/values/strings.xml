@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">NeomoneyBonds</string>
+    <string name="rate_of_interest">Rate of Interest</string>
+    <string name="minimum_investment">Minimum Investment</string>
+    <string name="bonds">Bonds</string>
+    <string name="text_return">Return</string>
+    <string name="_max_amount">Max Amount</string>
+    <string name="_select_qty">Select Qty.</string>
+    [14:30, 29/03/2022] Saichha: //Error messages
+
+    //Button text
+
+    //page header text
+
+
+    //input field hint text
+
+    //FB ID
+    <!--    <string name="facebook_app_id">466352731677627</string>-->
+    <!--    <string name="fb_login_protocol_scheme">fb466352731677627</string>-->
+
+
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="in_invest">Min Investment</string>
+    <string name="back">Back</string>
+    <string name="text_invest_now">Invest Now</string>
+    <string name="text_the_neo_safety_basket_contains_hand_picked_bonds_of_only_the_safest_and_highest_rated_companies_ensuring_your_money_is_completely_safe_while_generating_a_good_return">The Neo Safety Basket contains hand picked bonds of only the safest and highest rated companies, ensuring your money is completely safe, while generating a good return</string>
+    <string name="_returns">Returns</string>
+</resources>

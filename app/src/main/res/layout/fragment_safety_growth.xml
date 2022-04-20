@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.neomoneybonds.app.viewmodels.BasketDetailsViewModel" />
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onBlankClick"
+    android:background="@android:color/transparent">
+
+
+    <ImageView
+        android:id="@+id/room_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/neo_bonds_bg"
+        android:transitionName="go_to_living" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_bot_manager"
+        android:layout_width="300dp"
+        android:layout_height="450dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        app:lottie_cacheComposition="true"
+        app:lottie_loop="true"
+        app:lottie_speed="1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_40"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_40"
+        android:background="@drawable/bonds_digital_bg" />
+
+    <RelativeLayout
+        android:id="@+id/main_basket"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_all_bonds"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginBottom="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="top"
+            android:minHeight="@dimen/dimens_250"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/safety_basket_container"
+                android:layout_width="match_parent"
+                android:onClick="@{()->viewModel.expandSafety()}"
+                android:visibility="@{viewModel.isGrowthExpanded()?View.INVISIBLE:View.VISIBLE}"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/bonds_basket_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:paddingTop="@dimen/margin_10"
+
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingBottom="@dimen/margin_10"
+                    >
+
+                    <ImageView
+                        android:id="@+id/safety_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left"
+                        android:src="@drawable/safety_basket_icon" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left"
+                        android:background="@drawable/bonds_sub_basket_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/safety_icon"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/BondsValStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/safety_basket_percent"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:text="@{viewModel.highestSafety.basket.name}"
+                                bind:text="Safety Basket lekwfhih fi ihvi hifhe3iori " />
+
+                            <TextView
+                                android:id="@+id/safety_basket_percent"
+                                style="@style/BondsValStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="@{String.valueOf(viewModel.highestSafety.basket.rateOfInterest)}"
+                                android:textSize="@dimen/text_30sp"
+                                bind:text="7%" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/menu_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/in_invest" />
+
+                                <TextView
+                                    android:id="@+id/min_safety_investment_amt"
+                                    style="@style/BondsValStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewModel.highestSafety.basket.grandValue}"
+                                    bind:text="₹ 5,620" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/menu_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bonds" />
+
+                                <TextView
+                                    style="@style/BondsValStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:text="@{String.valueOf(viewModel.highestSafety.basketbonds.size())}"
+                                    bind:text="05" />
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/safety_tenure_list"
+                    data="@{viewModel.basketDetailResponse}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:visibility="@{viewModel.isSafetyExpanded()? View.VISIBLE : View.GONE}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    bind:itemCount="4"
+                    bind:listitem="@layout/layout_tenure_option" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/growth_basket_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/bonds_basket_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="@{viewModel.isSafetyExpanded()? View.GONE : View.VISIBLE}">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="@{()->viewModel.expandGrowth()}"
+                    android:visibility="@{viewModel.isSafetyExpanded()?View.INVISIBLE:View.VISIBLE}"
+                    android:paddingTop="@dimen/margin_20"
+                    android:paddingRight="@dimen/margin_15"
+                    android:paddingBottom="@dimen/margin_10">
+
+                    <ImageView
+                        android:id="@+id/growth_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:src="@drawable/growth_basket_icon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_toRightOf="@+id/growth_icon"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                style="@style/BondsValStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:text="@{viewModel.highestGrowth.basket.name}"
+                                bind:text="Growth Basket" />
+
+                            <TextView
+                                android:id="@+id/growth_basket_percent"
+                                style="@style/BondsValStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="@{String.valueOf(viewModel.highestGrowth.basket.rateOfInterest)}"
+                                android:textSize="@dimen/text_30sp"
+                                bind:text="8.5%" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/menu_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/in_invest" />
+
+                                <TextView
+                                    android:id="@+id/min_growth_investment_amt"
+                                    style="@style/BondsValStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewModel.highestGrowth.basket.grandValue}"
+                                    bind:text="₹ 5,620" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/menu_enable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bonds" />
+
+                                <TextView
+                                    style="@style/BondsValStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:text="@{String.valueOf(viewModel.highestGrowth.basketbonds.size())}"
+                                    bind:text="05" />
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/growth_tenure_list"
+                    data="@{viewModel.basketDetailResponse}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:orientation="horizontal"
+                    android:visibility="@{viewModel.isGrowthExpanded()? View.VISIBLE : View.GONE}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    bind:listitem="@layout/layout_tenure_option" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/view_all_bonds"
+        style="@style/CreditRatingOptionstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="@dimen/dimens_50"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:background="@drawable/digital_bonds_btn_bg"
+        android:visibility="@{viewModel.isSafetyExpanded() || viewModel.isGrowthExpanded()? View.GONE : View.VISIBLE}"
+        android:paddingTop="@dimen/margin_15"
+        android:paddingBottom="@dimen/margin_15"
+        android:text="View All Bonds" />
+
+    <LinearLayout
+        android:id="@+id/invest_btn_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/back"
+            style="@style/BondsButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.isSafetyExpanded() || viewModel.isGrowthExpanded() ? View.VISIBLE : View.GONE}"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/back" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/yes"
+            style="@style/EnableButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="@{viewModel.isSafetyExpanded() || viewModel.isGrowthExpanded()? View.VISIBLE : View.GONE}"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="@{()->viewModel.showGrowthBasket(true)}"
+            android:text="@string/text_invest_now" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/info_box"
+        style="@style/CreditRatingOptionstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_30"
+        android:background="@drawable/digital_bonds_info_bg"
+        android:paddingLeft="@dimen/margin_5"
+        android:paddingTop="@dimen/margin_15"
+        android:paddingRight="@dimen/margin_5"
+        android:paddingBottom="@dimen/margin_15"
+        android:text="@string/text_the_neo_safety_basket_contains_hand_picked_bonds_of_only_the_safest_and_highest_rated_companies_ensuring_your_money_is_completely_safe_while_generating_a_good_return" />
+
+
+</RelativeLayout>
+</layout>

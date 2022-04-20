@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.neomoneybonds.app.viewmodels.BasketDetailsViewModel" />
+    </data>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_basket_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/layout_header"
+                layout="@layout/layout_basket_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_21dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                bind:viewModel="@{viewModel}" />
+
+            <include
+                android:id="@+id/layout_basket"
+                layout="@layout/layout_purchase_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_21dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                bind:viewModel="@{viewModel}"
+                app:layout_constraintTop_toBottomOf="@id/layout_header" />
+
+            <include
+                android:id="@+id/layout_total_price"
+                android:visibility="@{viewModel.isAddFundEnabled()? View.GONE : View.VISIBLE}"
+                layout="@layout/layout_total_price"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_16dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/layout_basket"
+                bind:viewModel="@{viewModel}" />
+
+            <include
+                android:id="@+id/neo_wallet"
+                layout="@layout/layout_neo_wallet"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/layout_add_money"
+                bind:viewModel="@{viewModel}" />
+
+            <include
+                android:id="@+id/layout_add_money"
+                android:visibility="@{viewModel.isAddFundEnabled()? View.VISIBLE : View.GONE}"
+                layout="@layout/layout_add_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                bind:viewModel="@{viewModel}"
+                android:layout_marginBottom="@dimen/_10dp"
+                app:layout_constraintBottom_toTopOf="@id/add_buy" />
+
+
+
+
+
+
+
+            <include
+                android:id="@+id/add_buy"
+                layout="@layout/layout_addmoney_btn"
+                android:layout_width="match_parent"
+                bind:viewModel="@{viewModel}"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

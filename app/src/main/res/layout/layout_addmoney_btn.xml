@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<data>
+    <import type="android.view.View"/>
+    <variable
+        name="viewModel"
+        type="com.neomoneybonds.app.viewmodels.BasketDetailsViewModel" />
+</data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/add_money_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_35dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="28dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sp"
+        android:textStyle="bold"
+        android:text="@{viewModel.currentBasket.basket.getGrandValue()}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Rs 7247" />
+
+    <TextView
+        android:id="@+id/btn_buy"
+        android:onClick="@{()->viewModel.showPurchaseNext(true)}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_buy_gradient"
+       android:visibility="visible"
+        android:text="Buy"
+        android:textSize="@dimen/_16sp"
+        android:paddingEnd="39dp"
+        android:paddingStart="39dp"
+        android:paddingTop="@dimen/_20dp"
+        android:paddingBottom="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_35dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/add_funds"
+        android:onClick="@{()->viewModel.showPurchaseNext(true)}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_buy_gradient"
+        android:visibility="@{viewModel.isAddFundEnabled()? View.VISIBLE : View.GONE}"
+        android:text="Add Funds"
+        android:textSize="@dimen/_16sp"
+        android:paddingEnd="39dp"
+        android:paddingStart="39dp"
+        android:paddingTop="@dimen/_20dp"
+        android:paddingBottom="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_35dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
