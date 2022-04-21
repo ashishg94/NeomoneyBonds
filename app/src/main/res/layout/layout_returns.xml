@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="33dp"
                     android:textColor="@color/_neutral_snow"
-                    android:text="@{String.valueOf(data.basket.getTenure())}"
+                    android:text="@{String.valueOf(data.basket.getTenure(0))}"
                     android:layout_marginTop="@dimen/_20dp"
                     android:textSize="@dimen/_14sp"
                     android:layout_marginBottom="@dimen/_20dp"

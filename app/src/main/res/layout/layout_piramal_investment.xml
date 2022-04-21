@@ -21,7 +21,7 @@
             android:id="@+id/bond_price_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_piramal_investment_gradient"
+            android:background="@drawable/bg_piramal_gradient"
             app:layout_constraintTop_toBottomOf="@id/image_view">
 
 

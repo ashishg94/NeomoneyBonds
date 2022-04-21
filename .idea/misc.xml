@@ -63,6 +63,7 @@
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/fragment_safety_growth.xml" value="0.1" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/fragment_safety_growth2.xml" value="0.25416666666666665" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/laout_all_bonds_header.xml" value="1.2911184210526316" />
+        <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_about_issuer.xml" value="0.15092592592592594" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_add_money.xml" value="0.245018115942029" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_addmoney_btn.xml" value="0.1" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_all_bonds_header.xml" value="0.25416666666666665" />
@@ -71,7 +72,8 @@
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_basket_header.xml" value="0.24452554744525548" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_basket_list_item.xml" value="0.16" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_bond_details.xml" value="0.18207088255733148" />
-        <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_bond_list.xml" value="0.2" />
+        <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_bond_details_list.xml" value="0.15092592592592594" />
+        <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_bond_list.xml" value="0.1" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_bond_listing.xml" value="0.2" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_bonds_list.xml" value="0.245018115942029" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_bonds_list_grade.xml" value="0.25416666666666665" />
@@ -79,6 +81,9 @@
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_bonds_listing_header.xml" value="0.1" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_buy_button.xml" value="0.176" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_buynow_btn.xml" value="0.17883211678832117" />
+        <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_cashflow.xml" value="0.8800000000000001" />
+        <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_cashflow_list.xml" value="0.176" />
+        <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_debt_quality.xml" value="0.15092592592592594" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_grade.xml" value="0.536" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_neo_add_money.xml" value="0.245018115942029" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_neo_wallet.xml" value="0.136" />
@@ -95,6 +100,7 @@
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_returns.xml" value="0.1" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_safety_growth.xml" value="0.25416666666666665" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_search_bonds.xml" value="0.21557971014492755" />
+        <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_sell_buy.xml" value="0.15092592592592594" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_tenure_opt.xml" value="0.264" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_tenure_option.xml" value="0.1" />
         <entry key="..\:/Android WorkSapace/NeomoneyBonds/app/src/main/res/layout/layout_tenure_option_group.xml" value="0.264" />

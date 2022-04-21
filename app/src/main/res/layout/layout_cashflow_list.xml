@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="data"
+            type="com.neomoneybonds.app.model.BasketBond" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="1dp"
+
+        android:drawable="@drawable/item_border"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bond_cashflow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/image_view">
+
+            <TextView
+                android:id="@+id/tv_your_investment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="@dimen/_14dp"
+                android:textColor="@color/color_text_netural_smoke"
+                android:textSize="@dimen/_12sp"
+                android:text="Your Investment of"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Your Investment of" />
+
+            <TextView
+
+                android:id="@+id/tv_invest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_your_investment"
+                tools:text="Rs 2000" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tv_not_available"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_invest"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:id="@+id/tv_put_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="@dimen/_14dp"
+                    android:text="Put Date"
+                    android:textColor="#57000000"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintBottom_toTopOf=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Put Date" />
+
+                <TextView
+                    android_text="N/A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:textColor="@color/neutral_night"
+                    android:textSize="@dimen/_24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_put_date"
+                    tools:text="N/A" />
+
+                <TextView
+                    android:id="@+id/tv_instrument_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="38dp"
+                    android:text="Instrument Type"
+                    android:textColor="#57000000"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Instrument Type" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_38dp"
+                    android:text="Taxable"
+                    android:textColor="@color/neutral_night"
+                    android:textSize="@dimen/_24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_instrument_type"
+                    tools:text="Taxable" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
