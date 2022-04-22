@@ -46,8 +46,9 @@
                 android:layout_marginStart="130dp"
                 android:layout_marginTop="@dimen/_10dp"
                 android:layout_marginBottom="@dimen/_10dp"
+                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_14sp"
+                android:textSize="@dimen/text_20sp"
 
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_your_investment"
@@ -63,56 +64,44 @@
                 tools:layout_editor_absoluteX="0dp">
 
                 <TextView
-                    android:id="@+id/tv_put_date"
+                    android:id="@+id/tv_second"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="38dp"
                     android:layout_marginTop="@dimen/_14dp"
-                    android:text="Put Date"
-                    android:textColor="#57000000"
-                    android:textSize="@dimen/_12sp"
+                    android:text="2nd"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_10sp"
                     app:layout_constraintBottom_toTopOf=""
                     app:layout_constraintStart_toStartOf="parent"
-                    tools:text="Put Date" />
+                    tools:text="2nd" />
 
                 <TextView
-                    android_text="N/A"
+                    android_text="June"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="38dp"
                     android:layout_marginTop="@dimen/_10dp"
                     android:layout_marginBottom="@dimen/_10dp"
-                    android:textColor="@color/neutral_night"
-                    android:textSize="@dimen/_24sp"
+                    android:textColor="@color/_black"
+                    android:textSize="@dimen/_14sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_put_date"
-                    tools:text="N/A" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_second"
+                    tools:text="June" />
 
                 <TextView
-                    android:id="@+id/tv_instrument_type"
+                    android:id="@+id/tv_amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="38dp"
-                    android:text="Instrument Type"
-                    android:textColor="#57000000"
-                    android:textSize="@dimen/_12sp"
+                    android:text="Rs 16,59,499.18"
+                    android:textColor="@color/neutral_night"
+                    android:textSize="@dimen/_14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Instrument Type" />
+                    tools:text="Rs 16,59,499.18" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10dp"
-                    android:layout_marginEnd="@dimen/_38dp"
-                    android:text="Taxable"
-                    android:textColor="@color/neutral_night"
-                    android:textSize="@dimen/_24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_instrument_type"
-                    tools:text="Taxable" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
