@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.neomoneybonds.app.viewmodels.BasketDetailsViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:bind="http://schemas.android.com/tools"
+        android:id="@+id/card_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_10dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ph_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/piramal_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/piramal_fin"
+                    android:layout_marginTop="@dimen/_14dp"
+                    android:layout_marginStart="@dimen/_16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+                <TextView
+                    android:id="@+id/ph_finance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginBottom="@dimen/_14dp"
+                    android:textStyle="bold"
+                    android:text="Piramal Housing Finance"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/piramal_img"
+                    tools:text="Piramal Housing Finance" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bond_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ph_finance">
+
+            <TextView
+                android:id="@+id/tv_industry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="@dimen/_14dp"
+                android:textColor="#57000000"
+                android:textSize="@dimen/_12sp"
+                android:text="Industry"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Industry" />
+
+            <TextView
+                android:id="@+id/tv_annually"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:textColor="@color/neutral_night"
+                android:textSize="@dimen/_14sp"
+
+                android_text="Rs120.00"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_founded"
+                tools:text="₹120.00" />
+
+            <TextView
+                android:id="@+id/tv_founded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="38dp"
+                android:textColor="#57000000"
+                android:textSize="@dimen/_12sp"
+                android:text="Year Founded"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Year Founded" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_38dp"
+                android:textColor="@color/neutral_night"
+                android:textStyle="bold"
+                android:textSize="@dimen/_14sp"
+                android:text="Annually"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_founded"
+                tools:text="Annually" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bond_buisness_sector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_annually">
+
+                <TextView
+                    android:id="@+id/tv_buissness_sector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="@dimen/_14dp"
+                    android:textColor="#57000000"
+                    android:textSize="@dimen/_12sp"
+                    android:text="Business Sector"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Business Sector" />
+
+                <TextView
+                    android:id="@+id/tv_buissness_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:textColor="@color/neutral_night"
+                    android:textSize="@dimen/_14sp"
+
+                    android_text="IN8306N07053"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_type"
+                    tools:text="IN8306N07053" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="38dp"
+                    android:textColor="#57000000"
+                    android:textSize="@dimen/_12sp"
+                    android:text="Type Of User"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Type Of User" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_38dp"
+                    android:textColor="@color/neutral_night"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_14sp"
+                    android:text="Private Placement"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_type"
+                    tools:text="Private Placement" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bond_head_office"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_buissness_number">
+
+                    <TextView
+                        android:id="@+id/tv_head_office"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="@dimen/_14dp"
+                        android:textColor="#57000000"
+                        android:textSize="@dimen/_12sp"
+                        android:text="Head Office"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Head Office" />
+
+                    <TextView
+                        android:id="@+id/tv_inter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="38dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:textColor="@color/neutral_night"
+                        android:textSize="@dimen/_14sp"
+
+                        android_text="7.08%"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_head_office"
+                        tools:text="7.08%" />
+
+                    <TextView
+                        android:id="@+id/tv_md"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="38dp"
+                        android:textColor="#57000000"
+                        android:textSize="@dimen/_12sp"
+                        android:text="Current Md/CEO"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Current Md/CEO" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_38dp"
+                        android:textColor="@color/neutral_night"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_14sp"
+                        android:text="Khushru jijina"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_md"
+                        tools:text="Khushru jijina" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/bond_ownership"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_inter">
+
+                        <TextView
+                            android:id="@+id/tv_ownership"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="38dp"
+                            android:layout_marginTop="@dimen/_14dp"
+                            android:textColor="#57000000"
+                            android:textSize="@dimen/_12sp"
+                            android:text="Ownership"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="Ownership" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="38dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:layout_marginBottom="@dimen/_10dp"
+                            android:textColor="@color/neutral_night"
+                            android:textSize="@dimen/_14sp"
+
+                            android_text="N/A"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_ownership"
+                            tools:text="N/A" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
